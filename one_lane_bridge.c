@@ -12,7 +12,7 @@ typedef struct bridge {
  int south_waiting;
  int south_crossing;
  int south_consecutive;
- pthread_mutex_t lock;
+ struct lock lock;
  struct condition northbound_done;
  struct condition southbound_done;
 };
