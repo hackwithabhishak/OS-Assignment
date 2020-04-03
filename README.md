@@ -18,8 +18,7 @@ plus five functions described below.
 # When a northbound car arrives at the bridge, it invokes the function
   bridge_arrive_north(struct bridge *b)
  
-# This function must not return until it is safe for the car to cross the bridge, according to the rules
-# above. Once a northbound car has finished crossing the bridge it will invoke the function
+# This function must not return until it is safe for the car to cross the bridge, according to the rules above. Once a northbound car has finished crossing the bridge it will invoke the function
   bridge_leave_north(struct bridge *b)
  
 # Southbound cars will invoke analogous functions 
@@ -28,15 +27,22 @@ plus five functions described below.
 Use the next pages to write a declaration for struct bridge and the four functions above, plus
 the function bridge_init, which will be invoked to initialize the bridge
 
-#  You must write your solution in C using the Pintos functions for locks and condition
+  You must write your solution in C using the Pintos functions for locks and condition
+ 
 # variables:
 
   lock_init (struct lock *lock)
+  
   lock_acquire(struct lock *lock)
+  
   lock_release(struct lock *lock)
+  
   cond_init(struct condition *cond)
+  
   cond_wait(struct condition *cond, struct lock *lock)
+  
   cond_signal(struct condition *cond, struct lock *lock)
+  
   cond_broadcast(struct condition *cond, struct lock *lock)
  
 Use only these functions (e.g., no semaphores or other synchronization primitives).
